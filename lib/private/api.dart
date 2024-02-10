@@ -5,8 +5,8 @@ import 'models.dart';
 
 class PrivateMemberApi extends BaseCrud<PrivateMember, PrivateMembers> {
   @override
-  set basePath(String path) {
-    basePath = "/member/member";
+  get basePath {
+    return "/member/member";
   }
 
   @override

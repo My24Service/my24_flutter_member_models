@@ -1,6 +1,6 @@
 name: my24_flutter_member_models
 description: "My24Service shared member models package"
-version: 0.0.1
+version: 0.0.2
 homepage: https://www.my24service.com
 
 environment:
@@ -16,6 +16,9 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  http: ^1.2.0
+  mockito: ^5.2.0
+  shared_preferences: ^2.1.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0

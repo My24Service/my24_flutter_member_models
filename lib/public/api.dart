@@ -7,8 +7,8 @@ import 'models.dart';
 
 class MemberListPublicApi extends BaseCrud<Member, Members> {
   @override
-  set basePath(String path) {
-    basePath = "/member/list-public";
+  get basePath {
+    return "/member/list-public";
   }
 
   @override
@@ -24,8 +24,8 @@ class MemberListPublicApi extends BaseCrud<Member, Members> {
 
 class MemberDetailPublicApi extends BaseCrud<Member, Members> {
   @override
-  set basePath(String path) {
-    basePath = "/member/detail-public"; //current-detail-public
+  get basePath {
+    return "/member/detail-public"; //current-detail-public
   }
 
   @override
@@ -41,8 +41,8 @@ class MemberDetailPublicApi extends BaseCrud<Member, Members> {
 
 class MemberByCompanycodePublicApi extends BaseCrud<Member, Members> {
   @override
-  set basePath(String path) {
-    basePath = "/member/detail-public-companycode";
+  get basePath {
+    return "/member/detail-public-companycode";
   }
 
   Future<Member> get(String companycode) async {
