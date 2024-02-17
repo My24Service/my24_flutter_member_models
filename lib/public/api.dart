@@ -22,6 +22,23 @@ class MemberListPublicApi extends BaseCrud<Member, Members> {
   }
 }
 
+class MemberListPublicBranchesApi extends BaseCrud<Member, Members> {
+  @override
+  get basePath {
+    return "/member/list-public-branches";
+  }
+
+  @override
+  Member fromJsonDetail(Map<String, dynamic>? parsedJson) {
+    return Member.fromJson(parsedJson!);
+  }
+
+  @override
+  Members fromJsonList(Map<String, dynamic>? parsedJson) {
+    return Members.fromJson(parsedJson!);
+  }
+}
+
 class MemberDetailPublicApi extends BaseCrud<Member, Members> {
   @override
   get basePath {
