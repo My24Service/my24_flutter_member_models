@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:my24_flutter_core/models/base_models.dart';
 
 class Members extends BaseModelPagination {
@@ -74,7 +76,8 @@ class Member extends BaseModel {
 
   @override
   String toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
+    Map body = {};
+
+    return json.encode(body);
   }
 }
