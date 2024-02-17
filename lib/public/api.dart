@@ -29,7 +29,7 @@ class MemberListPublicBranchesApi extends BaseCrud<Member, Members> {
   }
 
   Future<List<Member>> search(String query) async {
-    Members result = await list(filters: {'q': query});
+    Members result = await list(filters: {'q': query}, needsAuth: false);
     return result.results!;
   }
 
