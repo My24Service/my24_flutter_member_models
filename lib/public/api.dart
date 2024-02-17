@@ -28,6 +28,11 @@ class MemberListPublicBranchesApi extends BaseCrud<Member, Members> {
     return "/member/list-public-branches";
   }
 
+  Future<List<Member>> search(String query) async {
+    Members result = await list(filters: {'q': query});
+    return result.results!;
+  }
+
   @override
   Member fromJsonDetail(Map<String, dynamic>? parsedJson) {
     return Member.fromJson(parsedJson!);
