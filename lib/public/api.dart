@@ -80,6 +80,8 @@ class MemberByCompanycodePublicApi extends BaseCrud<Member, Members> {
         headers: headers
     );
 
+    log.info('MemberByCompanycodePublicApi.get: $url, httpClient: $httpClient, headers: $headers');
+
     if (response.statusCode == 200) {
       return fromJsonDetail(json.decode(response.body));
     }
