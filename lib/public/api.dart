@@ -1,9 +1,12 @@
 import 'dart:convert';
 
+import 'package:logging/logging.dart';
 import 'package:my24_flutter_core/api/base_crud.dart';
 import 'package:my24_flutter_core/i18n.dart';
 
 import 'models.dart';
+
+final log = Logger('member_models.public_api');
 
 class MemberListPublicApi extends BaseCrud<Member, Members> {
   @override

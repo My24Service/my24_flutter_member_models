@@ -1,7 +1,10 @@
 import 'dart:convert';
 
+import 'package:logging/logging.dart';
 import 'package:my24_flutter_core/api/base_crud.dart';
 import 'models.dart';
+
+final log = Logger('member_models.private_api');
 
 class PrivateMemberApi extends BaseCrud<PrivateMember, PrivateMembers> {
   @override

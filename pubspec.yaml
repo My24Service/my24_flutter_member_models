@@ -9,6 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  logging: ^1.2.0
   my24_flutter_core:
     #    path: ../my24_flutter_core
     git:
