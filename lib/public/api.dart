@@ -70,28 +70,6 @@ class MemberByCompanycodePublicApi extends BaseCrud<Member, Members> {
     return "/member/detail-public-companycode";
   }
 
-  Future<Member> get(String companycode) async {
-    Map<String, String> headers = {};
-
-    String url = await getUrl('$basePath/$companycode/');
-
-    final response = await httpClient.get(
-        Uri.parse(url),
-        headers: headers
-    );
-
-    log.info('MemberByCompanycodePublicApi.get: $url, httpClient: $httpClient, headers: $headers');
-
-    if (response.statusCode == 200) {
-      return fromJsonDetail(json.decode(response.body));
-    }
-
-    final String errorMsg = My24i18n.tr('generic.exception_fetch_detail');
-    String msg = "$errorMsg (${response.body})";
-
-    throw Exception(msg);
-  }
-
   @override
   Member fromJsonDetail(Map<String, dynamic>? parsedJson) {
   return Member.fromJson(parsedJson!);
