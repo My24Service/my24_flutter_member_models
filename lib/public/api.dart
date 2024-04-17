@@ -14,6 +14,11 @@ class MemberListPublicApi extends BaseCrud<Member, Members> {
     return "/member/list-public";
   }
 
+  Future<List<Member>> search(String query) async {
+    Members result = await list(filters: {'q': query}, needsAuth: false);
+    return result.results!;
+  }
+
   @override
   Member fromJsonDetail(Map<String, dynamic>? parsedJson) {
     return Member.fromJson(parsedJson!);
